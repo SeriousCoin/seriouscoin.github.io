@@ -267,7 +267,7 @@ border-radius: 500px;
     background: rgba(255, 255, 255, 0.25);
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     border-radius: 30px;
     max-width: 800px;
     height: auto;
@@ -277,10 +277,10 @@ border-radius: 500px;
   .presale-info {
     font-family: 'Poppins';
     color: #f1f2f3;
-    padding-top: 10px;
-    padding-bottom: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-top: 0.75em;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
   }
   
   .presale-info h3 {
@@ -289,9 +289,20 @@ border-radius: 500px;
     text-align: center;
   }
 
+  .presale-initial-info-container {
+    border: #f1f2f3 solid 0.1em;
+    border-radius: 25px;
+    margin-bottom: 2em;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    /* backdrop-filter: blur(10px); */
+  }
+
   .presale-info p {
     /* font-size: 1.2em; */
-    font-size: clamp(0.2rem, 2.2vw, 1.2rem);
+    /* font-size: clamp(0.2rem, 2.2vw, 1.2rem); */
+    font-size: clamp(0.2rem, 2.6vw, 1.4rem);
   }
 
   button {
@@ -332,7 +343,8 @@ border-radius: 500px;
   }
 
   .presale-disclaimer p {
-    font-size: clamp(0.2rem, 2.2vw, 1.2rem);
+    /* font-size: clamp(0.2rem, 2.2vw, 1.2rem); */
+    font-size: clamp(0.2rem, 2.6vw, 1.4rem);
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 25px;
@@ -454,17 +466,20 @@ border-radius: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: clamp(0.2rem, 3vw, 1.8rem);
+    font-size: clamp(0.2rem, 2.8vw, 1.6rem);
     color: #f1f2f3;
+    white-space: nowrap;
   }
 
   .whitepaper-section-title {
     color: #f1f2f3;
-    font-size: clamp(0.2rem, 3vw, 1.8rem);
+    font-size: clamp(0.2rem, 4vw, 2.2rem);
+    white-space: nowrap;
   }
 
   .whitepaper-text {
-    font-size: clamp(0.2rem, 3vw, 1.4rem);
+    /* font-size: clamp(0.2rem, 2.8vw, 1.4rem); */
+    font-size: clamp(0.2rem, 3.4vw, 1.4rem);
     color: #f1f2f3;
   }
 
@@ -481,7 +496,8 @@ border-radius: 500px;
   }
 
   .evolution-of-money-meme-subtext-container {
-    font-size: clamp(0.2rem, 1.8vw, 1rem);
+    /* font-size: clamp(0.2rem, 1.75vw, 1.1rem); */
+    font-size: clamp(0.2rem, 2.2vw, 1.4rem);
     color: #f1f2f3;
   }
 
