@@ -70,6 +70,7 @@ lastScroll = currentScroll;
 document.getElementById("copyAddress").addEventListener("click", function() {
     var textToCopy = "We Told You The Presale Was Closed.";
     var button = this; // Store a reference to the button
+    var materialicon = button.querySelector("span");
     
     var tempInput = document.createElement("input");
     tempInput.setAttribute("value", textToCopy);
@@ -79,16 +80,46 @@ document.getElementById("copyAddress").addEventListener("click", function() {
     document.body.removeChild(tempInput);
     
     // Change the button's icon to a checkmark after copying
-    button.innerHTML = "check"; // Assuming "done" is your checkmark icon
-    button.classList.add("check"); // Add a class to style the "done" icon
+    materialicon.innerHTML = "check"; // Assuming "done" is your checkmark icon
+    materialicon.classList.add("check"); // Add a class to style the "done" icon
     button.style.backgroundColor = "#1DB954"; // Change button background color
     
     // Optionally, you can revert the icon and background color back to its original state after a certain delay
     setTimeout(function() {
-      button.innerHTML = "content_copy"; // Assuming "content_copy" is your original icon
+      materialicon.innerHTML = "content_copy"; // Assuming "content_copy" is your original icon
       button.style.backgroundColor = ""; // Revert button background color to default
-      button.classList.remove("check"); // Remove the class added to style the "done" icon
+      materialicon.classList.remove("check"); // Remove the class added to style the "done" icon
     }, 1500); // Change 1500 to the delay time you want in milliseconds
+  });
+
+  document.getElementById("copyAddressMobile").addEventListener("click", function() {
+    var textToCopy = "We Told You The Presale Was Closed.";
+    var button = this; // Store a reference to the button
+    var materialicon = button.querySelector(".material-symbols-outlined");
+    var buttonText = button.querySelector(".button-text");
+    
+    var tempInput = document.createElement("input");
+    tempInput.setAttribute("value", textToCopy);
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    
+    // Change the button's icon to a checkmark after copying
+    materialicon.innerHTML = "check"; // Assuming "done" is your checkmark icon
+    materialicon.classList.add("check"); // Add a class to style the "done" icon
+    buttonText.textContent = "Presale Address Copied";
+    buttonText.style.color = "#f1f2f3";
+    button.style.backgroundColor = "#1DB954"; // Change button background color
+    
+    // Optionally, you can revert the icon and background color back to its original state after a certain delay
+    setTimeout(function() {
+      materialicon.innerHTML = "content_copy"; // Assuming "content_copy" is your original icon
+      button.style.backgroundColor = ""; // Revert button background color to default
+      materialicon.classList.remove("check"); // Remove the class added to style the "done" icon
+      buttonText.textContent = "Copy Presale Address";
+      buttonText.style.color = "#101010";
+    }, 2000); // Change 1500 to the delay time you want in milliseconds
   });
 
 
