@@ -67,8 +67,10 @@ if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
 lastScroll = currentScroll;
 });
 
-document.getElementById("copyAddress").addEventListener("click", function() {
-    var textToCopy = "We Told You The Presale Was Closed.";
+
+  //Copy Address Button
+  document.getElementById("copyAddress").addEventListener("click", function() {
+    var textToCopy = "0xbE81EC70BA4Bec2B70cd51fc6a561968788D2c42";
     var button = this; // Store a reference to the button
     var materialicon = button.querySelector("span");
     
@@ -93,7 +95,7 @@ document.getElementById("copyAddress").addEventListener("click", function() {
   });
 
   document.getElementById("copyAddressMobile").addEventListener("click", function() {
-    var textToCopy = "We Told You The Presale Was Closed.";
+    var textToCopy = "0xbE81EC70BA4Bec2B70cd51fc6a561968788D2c42";
     var button = this; // Store a reference to the button
     var materialicon = button.querySelector(".material-symbols-outlined");
     var buttonText = button.querySelector(".button-text");
@@ -123,167 +125,103 @@ document.getElementById("copyAddress").addEventListener("click", function() {
   });
 
 
-/*
-var card = document.getElementById('landingimage');
-var documentContainer = document.documentElement; // Change this if you have a specific container
+  //Cronoscan Progress Bar
+  const apiKey = 'WHPB4IM295A94134G7XGMHUYM9MNMDPZQK';
+  const walletAddress = '0xbE81EC70BA4Bec2B70cd51fc6a561968788D2c42';
+  const refreshInterval = 15000; //Refresh Progress 5 Times Per Second
 
-var mouseHover = false;
-var mousePosition = { x: 0, y: 0 };
-var cardSize = { width: 0, height: 0 };
-var SCALE_X = 8;
-var SCALE_Y = 16;
-
-documentContainer.onblur = function() {
-  mouseHover = false;
-};
-
-documentContainer.onfocus = function() {
-  mouseHover = true;
-};
-
-documentContainer.onmousemove = function(e) {
-  if (!mouseHover) return;
-  var rect = card.getBoundingClientRect();
-  var x = e.clientX - rect.left;
-  var y = e.clientY - rect.top;
-  mousePosition = { x, y };
-  cardSize = {
-    width: card.offsetWidth || 0,
-    height: card.offsetHeight || 0,
-  };
-  card.style.transform = `perspective(1000px) rotateX(${
-    (mousePosition.y / cardSize.height) * -(SCALE_Y * 2) + SCALE_Y
-  }deg) rotateY(${
-    (mousePosition.x / cardSize.width) * (SCALE_X * 2) - SCALE_X
-  }deg) translateZ(10px)`;
-};
-
-documentContainer.onmouseout = function() {
-  mouseHover = false;
-  card.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
-};
-
-documentContainer.onmouseover = function() {
-  mouseHover = true;
-};
-*/
-
-/*
-var card = document.getElementById('landingimage');
-var documentContainer = document.documentElement; // Change this if you have a specific container
-
-var rotationX = 0; // Initialize rotation variables
-var rotationY = 0;
-
-var SCALE_X = 8;
-var SCALE_Y = 16;
-
-// Function to check if the device is a mobile device
-function isMobileDevice() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
-
-documentContainer.onblur = function() {
-  mouseHover = false;
-};
-
-documentContainer.onfocus = function() {
-  mouseHover = true;
-};
-
-// On mobile devices, continuously tilt the image left and right
-function tiltLoop() {
-  rotationY += 0.5; // Adjust the speed of rotation as needed
-
-  card.style.transform = `perspective(1000px) rotateX(${rotationX}deg) rotateY(${rotationY}deg) translateZ(10px)`;
-
-  requestAnimationFrame(tiltLoop); // Call tiltLoop recursively
-}
-
-// If on mobile, initiate tilt loop, otherwise, use mouse hover animation
-if (isMobileDevice()) {
-  tiltLoop();
-} else {
-  documentContainer.onmousemove = function(e) {
-    var rect = card.getBoundingClientRect();
-    var x = e.clientX - rect.left;
-    var y = e.clientY - rect.top;
-    mousePosition = { x, y };
-    cardSize = {
-      width: card.offsetWidth || 0,
-      height: card.offsetHeight || 0,
-    };
-    card.style.transform = `perspective(1000px) rotateX(${
-      (mousePosition.y / cardSize.height) * -(SCALE_Y * 2) + SCALE_Y
-    }deg) rotateY(${
-      (mousePosition.x / cardSize.width) * (SCALE_X * 2) - SCALE_X
-    }deg) translateZ(10px)`;
-  };
-
-  documentContainer.onmouseout = function() {
-    mouseHover = false;
-    card.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
-  };
-
-  documentContainer.onmouseover = function() {
-    mouseHover = true;
-  };
-}
-*/
-
-/*
-var card = document.getElementById('landingimage');
-var documentContainer = document.documentElement; // Change this if you have a specific container
-
-var rotationY = 0; // Initialize rotation variables for Y-axis
-var SCALE_Y = 16; // Adjust these values for the desired rotation range
-var direction = 1; // Variable to track the direction of rotation
-
-// Function to check if the device is a mobile device
-function isMobileDevice() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
-
-documentContainer.onblur = function() {
-  mouseHover = false;
-};
-
-documentContainer.onfocus = function() {
-  mouseHover = true;
-};
-
-// On mobile devices, continuously tilt the image left and right along the Y-axis
-function tiltLoop() {
-  rotationY += 0.25 * direction; // Adjust the speed of rotation as needed
-
-  // Check if rotation reaches 180 degrees, then reverse the direction
-  if (rotationY >= 30 || rotationY <= -30) {
-    direction *= -1;
+  async function fetchTransactions() {
+    const url = `https://api.cronoscan.com/api?module=account&action=txlist&address=0xbE81EC70BA4Bec2B70cd51fc6a561968788D2c42&startblock=0&endblock=99999999&sort=asc&apikey=WHPB4IM295A94134G7XGMHUYM9MNMDPZQK`;
+    const response = await fetch(url);
+    const data = await response.json();
+    return data.result;
   }
 
-  card.style.transform = `perspective(1000px) rotateY(${rotationY}deg) translateZ(10px)`;
+  const individualCap = 2500; // Cap per wallet in CRO
+  const totalCap = 125000; // Total cap in CRO
 
-  requestAnimationFrame(tiltLoop); // Call tiltLoop recursively
-}
+  function processTransactions(transactions) {
+    let totalValidContributions = 0;
+    const walletContributions = {};
 
-// If on mobile, initiate tilt loop for Y-axis tilt
-if (isMobileDevice()) {
-  tiltLoop();
-} else {
-  documentContainer.onmousemove = function(e) {
-    // You can keep your existing mouse hover animation code here if needed
-  };
+    for (const tx of transactions) {
+      const from = tx.from.toLowerCase();
+      const value = parseFloat(tx.value) / 1e18; // Convert base unit to CRO
 
-  documentContainer.onmouseout = function() {
-    mouseHover = false;
-    card.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
-  };
+      if (!walletContributions[from]) {
+        walletContributions[from] = 0;
+      }
 
-  documentContainer.onmouseover = function() {
-    mouseHover = true;
-  };
-}
-*/
+      if (walletContributions[from] < individualCap) {
+        const remainingCap = individualCap - walletContributions[from];
+        const contribution = Math.min(value, remainingCap);
+        walletContributions[from] += contribution;
+        totalValidContributions += contribution;
+
+        if (totalValidContributions >= totalCap) {
+          totalValidContributions = totalCap;
+          break; // Stop processing if total cap is reached
+        }
+      }
+    }
+
+    return totalValidContributions;
+  }
+
+  function updateProgressBar(contributions, cap) {
+    const progressBar = document.getElementById('progress-bar');
+    const currentAmount = document.getElementById('current-amount');
+    const percentage = (contributions / cap) * 100;
+    progressBar.style.width = `${percentage}%`;
+    currentAmount.textContent = `${contributions.toLocaleString()} CRO`;
+  }
+
+  async function updateFundraisingProgress() {
+    const transactions = await fetchTransactions();
+    const totalValidContributions = processTransactions(transactions);
+    updateProgressBar(totalValidContributions, totalCap);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    updateFundraisingProgress();
+    setInterval(updateFundraisingProgress, refreshInterval);
+  });
+
+//Countdown Timer
+(function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+  const presaleStart = "2024-05-18";  // Use the ISO format YYYY-MM-DD
+  const presaleTime = "19:00:00";  // Use the time in HH:MM:SS format
+  
+  const countDown = new Date(`${presaleStart}T${presaleTime}`).getTime();
+  
+  const x = setInterval(function() {
+    const now = new Date().getTime(),
+          distance = countDown - now;
+
+    document.getElementById("days").innerText = Math.floor(distance / day);
+    document.getElementById("hours").innerText = Math.floor((distance % day) / hour);
+    document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute);
+    document.getElementById("seconds").innerText = Math.floor((distance % minute) / second);
+
+    // Do something later when date is reached
+    if (distance < 0) {
+      document.getElementById("headline").innerText = "The Presale Is Over!";
+      
+  document.getElementById("headline").style.display = "block"
+      document.getElementById("countdown").style.display = "none";
+      
+      clearInterval(x);
+    }
+    //seconds
+  }, 1000);
+}());
+
+  //Landing Image Hover
 var card = document.getElementById('landingimage');
 var documentContainer = document.documentElement; // Change this if you have a specific container
 
