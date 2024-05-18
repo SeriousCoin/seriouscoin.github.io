@@ -67,63 +67,103 @@ if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
 lastScroll = currentScroll;
 });
 
+/*
+console.clear();
 
-  //Copy Address Button
-  document.getElementById("copyAddress").addEventListener("click", function() {
-    var textToCopy = "0xbE81EC70BA4Bec2B70cd51fc6a561968788D2c42";
-    var button = this; // Store a reference to the button
-    var materialicon = button.querySelector("span");
-    
-    var tempInput = document.createElement("input");
-    tempInput.setAttribute("value", textToCopy);
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
-    
-    // Change the button's icon to a checkmark after copying
-    materialicon.innerHTML = "check"; // Assuming "done" is your checkmark icon
-    materialicon.classList.add("check"); // Add a class to style the "done" icon
-    button.style.backgroundColor = "#1DB954"; // Change button background color
-    
-    // Optionally, you can revert the icon and background color back to its original state after a certain delay
-    setTimeout(function() {
-      materialicon.innerHTML = "content_copy"; // Assuming "content_copy" is your original icon
-      button.style.backgroundColor = ""; // Revert button background color to default
-      materialicon.classList.remove("check"); // Remove the class added to style the "done" icon
-    }, 1500); // Change 1500 to the delay time you want in milliseconds
+const cardsContainer = document.querySelector(".cards");
+const cardsContainerInner = document.querySelector(".cards__inner");
+const cards = Array.from(document.querySelectorAll(".card"));
+const overlay = document.querySelector(".overlay");
+
+const applyOverlayMask = (e) => {
+  const overlayEl = e.currentTarget;
+  const x = e.pageX - cardsContainer.offsetLeft;
+  const y = e.pageY - cardsContainer.offsetTop;
+
+  overlayEl.style = `--opacity: 1; --x: ${x}px; --y:${y}px;`;
+};
+
+const createOverlayCta = (overlayCard, ctaEl) => {
+  const overlayCta = document.createElement("div");
+  overlayCta.classList.add("cta");
+  overlayCta.textContent = ctaEl.textContent;
+  overlayCta.setAttribute("aria-hidden", true);
+  overlayCard.append(overlayCta);
+};
+
+const observer = new ResizeObserver((entries) => {
+  entries.forEach((entry) => {
+    const cardIndex = cards.indexOf(entry.target);
+    let width = entry.borderBoxSize[0].inlineSize;
+    let height = entry.borderBoxSize[0].blockSize;
+
+    if (cardIndex >= 0) {
+      overlay.children[cardIndex].style.width = `${width}px`;
+      overlay.children[cardIndex].style.height = `${height}px`;
+    }
+  });
+});
+
+const initOverlayCard = (cardEl) => {
+  const overlayCard = document.createElement("div");
+  overlayCard.classList.add("card");
+  createOverlayCta(overlayCard, cardEl.lastElementChild);
+  overlay.append(overlayCard);
+  observer.observe(cardEl);
+};
+
+cards.forEach(initOverlayCard);
+document.body.addEventListener("pointermove", applyOverlayMask);
+*/
+
+console.clear();
+
+if (window.innerWidth > 768) {
+  const cardsContainer = document.querySelector(".cards");
+  const cardsContainerInner = document.querySelector(".cards__inner");
+  const cards = Array.from(document.querySelectorAll(".card"));
+  const overlay = document.querySelector(".overlay");
+
+  const applyOverlayMask = (e) => {
+    const overlayEl = e.currentTarget;
+    const x = e.pageX - cardsContainer.offsetLeft;
+    const y = e.pageY - cardsContainer.offsetTop;
+
+    overlayEl.style = `--opacity: 1; --x: ${x}px; --y:${y}px;`;
+  };
+
+  const createOverlayCta = (overlayCard, ctaEl) => {
+    const overlayCta = document.createElement("div");
+    overlayCta.classList.add("cta");
+    overlayCta.textContent = ctaEl.textContent;
+    overlayCta.setAttribute("aria-hidden", true);
+    overlayCard.append(overlayCta);
+  };
+
+  const observer = new ResizeObserver((entries) => {
+    entries.forEach((entry) => {
+      const cardIndex = cards.indexOf(entry.target);
+      let width = entry.borderBoxSize[0].inlineSize;
+      let height = entry.borderBoxSize[0].blockSize;
+
+      if (cardIndex >= 0) {
+        overlay.children[cardIndex].style.width = `${width}px`;
+        overlay.children[cardIndex].style.height = `${height}px`;
+      }
+    });
   });
 
-  document.getElementById("copyAddressMobile").addEventListener("click", function() {
-    var textToCopy = "0xbE81EC70BA4Bec2B70cd51fc6a561968788D2c42";
-    var button = this; // Store a reference to the button
-    var materialicon = button.querySelector(".material-symbols-outlined");
-    var buttonText = button.querySelector(".button-text");
-    
-    var tempInput = document.createElement("input");
-    tempInput.setAttribute("value", textToCopy);
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
-    
-    // Change the button's icon to a checkmark after copying
-    materialicon.innerHTML = "check"; // Assuming "done" is your checkmark icon
-    materialicon.classList.add("check"); // Add a class to style the "done" icon
-    buttonText.textContent = "Presale Address Copied";
-    buttonText.style.color = "#f1f2f3";
-    button.style.backgroundColor = "#1DB954"; // Change button background color
-    
-    // Optionally, you can revert the icon and background color back to its original state after a certain delay
-    setTimeout(function() {
-      materialicon.innerHTML = "content_copy"; // Assuming "content_copy" is your original icon
-      button.style.backgroundColor = ""; // Revert button background color to default
-      materialicon.classList.remove("check"); // Remove the class added to style the "done" icon
-      buttonText.textContent = "Copy Presale Address";
-      buttonText.style.color = "#101010";
-    }, 2000); // Change 1500 to the delay time you want in milliseconds
-  });
+  const initOverlayCard = (cardEl) => {
+    const overlayCard = document.createElement("div");
+    overlayCard.classList.add("card");
+    createOverlayCta(overlayCard, cardEl.lastElementChild);
+    overlay.append(overlayCard);
+    observer.observe(cardEl);
+  };
 
+  cards.forEach(initOverlayCard);
+  document.body.addEventListener("pointermove", applyOverlayMask);
+}
 
   //Cronoscan Progress Bar
   const apiKey = 'WHPB4IM295A94134G7XGMHUYM9MNMDPZQK';
