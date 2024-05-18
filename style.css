@@ -273,7 +273,33 @@ border-radius: 500px;
     transition: all 0.3s ease;
   }
 
+  .presale-over-container {
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    max-width: 800px;
+    height: auto;
+    padding: 2em;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .presale-over {
+    color: #f1f2f3;
+    text-align: center;
+    font-size: clamp(0rem, 6vw, 3.4rem);
+    /* white-space: nowrap; */
+  }
+
+  .presale-over-subtext {
+    color: #f1f2f3;
+    text-align: center;
+    font-size: clamp(0.2rem, 3vw, 1.6rem);
+  }
+
   .presale-container {
+    display: none;
     background: rgba(255, 255, 255, 0.25);
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
