@@ -77,139 +77,31 @@
         <main class="main flow">
           <div class="main__cards cards">
           <div class="cards__inner">
-                <!--
-                <div class="cards__card card " onclick="openVVSLink()">
-                    <img class="card-image-container" src="assets/vvs-logo.webp">
-                    <a href="#" class="card__cta cta">BUY ON VVS</a>
+                <!-- ORIGINAL TEMPLATE
+                <div class="cards__card card " onclick="openLink()">
+                    <img class="card-image-container" src="#">
+                    <a href="#" class="card__cta cta">BUTTON TEXT</a>
                 </div>
                 -->
                 <a class="cards__card card" href="https://vvs.finance/swap?inputCurrency=CRO&outputCurrency=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank">
                     <img class="card-image-container" src="assets/vvs-logo.webp">
                     <span class="card__cta cta">BUY ON VVS</span>
                 </a>
+                
+                <a class="cards__card card" href="https://wolfswap.app/?chainId=25&sellToken=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&buyToken=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank">
+                    <img class="card-image-container" src="assets/wolfswap-logo.webp">
+                    <span class="card__cta cta">BUY ON WOLFSWAP</span>
+                </a>
 
                 <a class="cards__card card" href="https://dexscreener.com/cronos/0x18ab7692cc20f68a550b1fdd749720cad4a4894f" target="_blank">
-                    <img class="card-image-container" src="assets/dexscreener-logo.webp">
-                    <span href="#" class="card__cta cta">CHART (DEXSCREENER)</span>
+                  <img class="card-image-container" src="assets/dexscreener-logo.webp">
+                  <span class="card__cta cta">CHART (DEXSCREENER)</span>
                 </a>
-                
-                <div class="cards__card card">
-                    <img class="card-image-container" src="assets/serious-question-mark.webp">
-                    <span class="card__cta cta">COMING SOON</span>
-                </div>
             </div>
             
             <div class="overlay cards__inner"></div>
             </div>
         </main>
-
-        <div class="presale-over-container">
-          <p class="presale-over">
-            <b>The Presale Has Ended!</b>
-          </p>
-          <div id="progress-title">
-          </div>
-          <div id="progress-container">
-            <div id="progress-bar"></div>
-          </div>
-          <div id="contributions">
-              <div id="current-amount">0 CRO</div>
-              <div id="total-cap">125,000 CRO</div>
-          </div>
-          <hr>
-          <br>
-          <p class="presale-over-subtext">
-            That sold out seriously quick!
-            Stay tuned to our discord and X account as our LP will be launched and $SERIOUS tokens will be distributed to presale buyers in less than 24 hours. We will keep you updated along the way!
-            <br><br>
-            Thanks for your support. It's time to get $SERIOUS
-          </p>
-        </div>
-
-        <div class="presale-container">
-          <div class="presale-info">
-            <p class="presale-title"> $SERIOUS PRESALE </p>
-            
-            <br>
-            <hr>
-            <br>
-
-            <!-- <div class="presale-initial-info-container"> -->
-              <p class="presale-initial-info">
-                50% of the $SERIOUS supply will be available for purchase in the presale.<br><br>
-                100% of $CRO contributed to the presale will be locked as liquidity 🔒<br><br>
-                100% of LP tokens will be burned 🔥<br><br>
-                To participate in the $SERIOUS presale, send $CRO to the wallet address provided below, taking into consideration the listed parameters.<br><br>
-                $SERIOUS tokens will be distributed within 24 hours of presale end.
-              </p>
-            <!-- </div> -->
-            
-            <br>
-            <hr>
-            <br>
-  
-            <p class="presale-address">
-              <b>Presale Address:</b> <br> 0xbE81EC70BA4Bec2B70cd51fc6a561968788D2c42
-              <!--
-              <button id="copyAddress" class="material-symbols-outlined">
-                content_copy
-              </button>
-              -->
-              <button class="copy-address" id="copyAddress">
-                <span class="material-symbols-outlined">content_copy</span>
-              </button>
-              <button class="copy-address-mobile" id="copyAddressMobile">
-                <span class="material-symbols-outlined">content_copy</span>
-                <span class="button-text">Copy Presale Address</span>
-              </button>
-            </p>
-            
-            <br>
-  
-            <p>
-              <b>Minimum Participation Amount:</b> 250 CRO <br>
-              <b>Maximum Participation Amount:</b> 2500 CRO
-            </p>
-  
-            <br>
-
-            <p>
-              <b>Total Presale Capacity:</b> 125,000 CRO
-            </p>
-            
-            <div id="presale-end-title">
-              <p><b>Presale Ends In:</b></p>
-            </div>
-            <div class="countdown-container">
-              <div id="countdown">
-                <ul>
-                  <li><span id="days"></span>Days</li>
-                  <li><span id="hours"></span>Hours</li>
-                  <li><span id="minutes"></span>Minutes</li>
-                  <li><span id="seconds"></span>Seconds</li>
-                </ul>
-              </div>
-              <div id="headline" style="display: none;"></div>
-            </div>
-          </div>
-
-          <div id="progress-title">
-            <p><b>Presale Progress:</b></p>
-          </div>
-          <div id="progress-container">
-            <div id="progress-bar"></div>
-          </div>
-          <div id="contributions">
-              <div id="current-amount">0 CRO</div>
-              <div id="total-cap">125,000 CRO</div>
-          </div>
-
-          <div class="presale-disclaimer">
-            <p> Any wallet that exceeds the maximum participation amount within the presale window will be refunded the excess. <br><br>
-            Only send $CRO on Cronos chain to the wallet address provided. All other tokens will be lost. <br><br>
-            Do not transfer any funds outside of the presale window. Doing so will result in loss of funds.</p>
-          </div>
-        </div>
       </div>
 
       <div class="tokenomics-section">
@@ -242,6 +134,10 @@
               15% of Supply
               <br>
               Marketing/Listings/Airdrops
+              <br>
+              <a class="marketing-wallet-link" href="https://cronoscan.com/token/0x7E575f50777f5096f323EB063fD80BA447627060?a=0xbe81ec70ba4bec2b70cd51fc6a561968788d2c42" target="_blank">
+                SeriousCoin.Cro Wallet
+              </a>
             </p>
           </div>
         </div>
