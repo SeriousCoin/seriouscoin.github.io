@@ -701,6 +701,112 @@ body {
     }
   /* Whitepaper Section End */
 
+  /* Meme Toolkit Start */
+    .serious-meme-toolkit-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .title-memes {
+      height: 7.5vw;
+      max-height: 100px;
+    }
+
+    .serious-meme-toolkit-title h1 {
+      color: #f1f2f3;
+      font-size: clamp(0.2rem, 4.8vw, 2.8rem);
+    }
+
+    .meme-toolkit-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: calc(100vh - 6em);
+      height: auto;
+      padding: 1em;
+    }
+
+    .serious-meme-contest-link {
+      color: #f1f2f3;
+    }
+
+    .meme-toolkit-download {
+      padding: 2em;
+      background: rgba(255, 255, 255, 0.25);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      max-width: 800px;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .meme-toolkit-download p {
+      color: #f1f2f3;
+      font-size: clamp(0.2rem, 3.6vw, 1.6rem);
+    }
+
+    #downloadButton {
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+      width: fit-content;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #f1f2f3;
+      text-decoration: none;
+      background-color: transparent;
+      border: #f1f2f3 0.1em solid;
+      border-radius: 1000px;
+      margin-top: 1.5em;
+      padding: 0.75em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+  
+  #downloadButton:hover {
+    color: #101010;
+    border: #f1f2f3 0.1em solid;
+    background-color: #f1f2f3;
+  }
+
+  .meme-before-after {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    box-sizing: border-box;
+    max-width: 835px;
+  }
+
+  .original-meme-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    font-size: clamp(0.2rem, 8vw, 5rem);
+    color: #f1f2f3;
+  }
+
+  .serious-meme-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    font-size: clamp(0.2rem, 8vw, 5rem);
+    color: #f1f2f3;
+  }
+
+  .original-meme, .serious-meme {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Meme Toolkit End */
+
   /* Footer Section Start */
     .footer-divider {
       background: #f1f2f3;
@@ -780,7 +886,7 @@ body {
     -webkit-tap-highlight-color: transparent;
   }
 
-  nav ul li:nth-child(3){
+  nav ul li:nth-child(4){
     display: none;
   }
 
