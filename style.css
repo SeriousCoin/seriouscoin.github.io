@@ -583,6 +583,7 @@ body {
       border: 2px solid rgba(255, 255, 255, 0.1);
       box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(10px);
+      margin-bottom: 2em;
     }
     .tokenomics-title {
       display: flex;
@@ -677,7 +678,8 @@ body {
     color: #f1f2f3;
     font-size: clamp(0.2rem, 2.2vw, 1.4rem);
     padding: 1em;
-    padding-top: 2em;
+    /* padding-top: 2em; */
+    padding-top: 0;
     padding-bottom: 2em;
     text-align: center;
   }
@@ -687,7 +689,7 @@ body {
       display: flex;
       justify-content: center;
       padding: 1em;
-      padding-bottom: 0;
+      /* padding-bottom: 0; */
     }
 
     .whitepaper-container {
@@ -758,20 +760,30 @@ body {
   /* Whitepaper Section End */
 
   /* Learn Section Start */
+    .tokenstandards-title h1{
+      font-size: clamp(0.1rem, 8vw, 3.8rem);
+      /* line-height: clamp(0.1rem, 8vw, 3.8rem); */
+      line-height: 0.25em;
+      margin-top: 0.75em;
+    }
+
     .tokenstandards-title {
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: center;
       align-items: center;
+      /*
       font-size: clamp(0rem, 3.4vw, 1.8rem);
       line-height: clamp(0rem, 5vw, 2.6rem);
+      */
+      font-size: clamp(0.1rem, 4vw, 1.8rem);
       color: #f1f2f3;
       white-space: nowrap;
     }
 
     .introduction-text {
-      font-size: clamp(0.2rem, 3.6vw, 1.4rem);
+      font-size: clamp(0.1rem, 3.8vw, 1.4rem);
       color: #f1f2f3;
     }
     
@@ -998,6 +1010,10 @@ body {
 
   button:hover {
     transform: none;
+  }
+
+  .tokenomics-section {
+    margin-bottom: 1em;
   }
 
   .tokenomics-split-container {
