@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Serious NFT View</title>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap" rel="stylesheet">
+        <!-- Google Material Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!-- Personal CSS -->
+        <link rel="stylesheet" href="/style.css">
+        <!-- NFT Viewer Stylesheet -->
+        <link rel="stylesheet" href="/nft-viewer/nftview.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"
+        integrity="sha384-Htz1SE4Sl5aitpvFgr2j0sfsGUIuSXI6t8hEyrlQ93zflEF3a29bH2AvkUROUw7J" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+        <!-- NAVIGATION -->
+        <nav>
+            <a href="/"><img src="/assets/Serious-Web.webp" class="logo"/></a>
+            <!-- NAV LINKS -->
+            <ul>
+                <li class="mobile-nav-links"><a href="/">Home</a></li>
+                <li class="mobile-nav-links"><a href="/whitepaper">Whitepaper</a></li>
+                <li class="mobile-nav-links"><a href="/learn">Learn</a></li>
+                <li class="mobile-nav-links active"><a href="/nft-viewer">NFT Viewer (Beta)</a></li>
+                <li class="mobile-nav-links"><a href="/meme-toolkit">Meme Toolkit</a></li>
+
+                <li class="desktop-nav-links"><a href="/">Home</a></li>
+                <li class="desktop-nav-links"><a href="/whitepaper">Whitepaper</a></li>
+                <li class="desktop-nav-links"><a href="/learn">Learn</a></li>
+                <li class="dropdown">
+                    <a href="#" class="desktop-nav-links active">Serious Tools</a>
+                    <ul class="dropdown-content">
+                        <li><a href="/nft-viewer">NFT Viewer (Beta)</a></li>
+                        <li><a href="/meme-toolkit">Meme Toolkit</a></li>
+                    </ul>
+                </li>
+                <li class="desktop-nav-links"><a href="https://vvs.finance/swap?inputCurrency=CRO&outputCurrency=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank" class="glow-on-hover">Buy on VVS</a></li>
+            </ul>
+            <!-- MOBILE BURGER MENU -->
+            <a href="https://vvs.finance/swap?inputCurrency=CRO&outputCurrency=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank" class="mobile-nav-buy">Buy on VVS</a>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+
+        <div class="page-background"></div>
+
+        <div class="nft-viewer-page">
+
+            <div class="container" id="input-container">
+                <h1>SERIOUS NFT Viewer</h1>
+                <form id="nft-form">
+                    <label for="contract-address">Contract Address:</label>
+                    <input type="text" id="contract-address" required>
+                    <label for="token-id">Token ID:</label>
+                    <input type="text" id="token-id" required>
+                    <button id="loadButton" type="submit">Load NFT</button>
+                </form>
+            </div>
+            <div id="loading-container" style="display: none;">
+                <div class="loading"></div>
+            </div>
+            <div class="container" id="nft-container" style="display: none;">
+                <div class="nft-display-container" id="nft-display-container" style="display: none;">
+                    <div class="nft-media-container" id="nft-media-container"></div>
+                    <div class="nft-info-container" id="nft-info-container"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- NFT Viewer JS -->
+        <script src="/nft-viewer/nftview.js"></script>
+
+    </body>
+</html>
