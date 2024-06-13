@@ -1035,7 +1035,7 @@ body {
 }
 
 /* For Navbar */
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 870px) {
   nav{
     justify-content: space-between;
   }
