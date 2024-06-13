@@ -7,11 +7,11 @@
     <title>Serious Whitepaper</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap" rel="stylesheet">
     <!-- Personal CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 
   </head>
 
@@ -19,14 +19,27 @@
         <!-- NAVIGATION -->
         <nav>
             <!-- LOGO -->
-            <a href="./index.html"><img src="assets/Serious-Web.webp" class="logo"/></a>
+            <a href="/"><img src="/assets/Serious-Web.webp" class="logo"/></a>
             <!-- NAV LINKS -->
             <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./whitepaper.html" class="active">Whitepaper</a></li>
-            <li><a href="./memetoolkit.html">Meme Toolkit</a></li>
-            <li><a href="https://vvs.finance/swap?inputCurrency=CRO&outputCurrency=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank" class="glow-on-hover">Buy on VVS</a></li>
-            </ul>
+              <li class="mobile-nav-links"><a href="/">Home</a></li>
+              <li class="mobile-nav-links active"><a href="/whitepaper">Whitepaper</a></li>
+              <!--<li class="mobile-nav-links"><a href="/learn">Learn</a></li>-->
+              <!--<li class="mobile-nav-links"><a href="/nft-viewer">NFT Viewer (Beta)</a></li>-->
+              <li class="mobile-nav-links"><a href="/meme-toolkit">Meme Toolkit</a></li>
+  
+              <li class="desktop-nav-links"><a href="/">Home</a></li>
+              <li class="desktop-nav-links active"><a href="/whitepaper">Whitepaper</a></li>
+              <!--<li class="desktop-nav-links"><a href="/learn">Learn</a></li>-->
+              <li class="dropdown">
+                  <a href="#" class="desktop-nav-links">Serious Tools</a>
+                  <ul class="dropdown-content">
+                      <!--<li><a href="/nft-viewer">NFT Viewer (Beta)</a></li>-->
+                      <li><a href="/meme-toolkit">Meme Toolkit</a></li>
+                  </ul>
+              </li>
+              <li class="desktop-nav-links"><a href="https://vvs.finance/swap?inputCurrency=CRO&outputCurrency=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank" class="glow-on-hover">Buy on VVS</a></li>
+          </ul>
             <!-- MOBILE BURGER MENU -->
             <a href="https://vvs.finance/swap?inputCurrency=CRO&outputCurrency=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank" class=" mobile-nav-buy">Buy on VVS</a>
             <div class="burger">
@@ -75,7 +88,7 @@
                             and gimmicky “utility” coins -  join our community of serious 
                             investors and participate in a serious project.
                             <br><br>
-                            <img class="its-time-to-get-serious-meme" src="assets/its-time-to-get-serious-meme.webp">
+                            <img class="its-time-to-get-serious-meme" src="/assets/its-time-to-get-serious-meme.webp">
                         </p>
                     </div>
                     <div class="whitepaper-divider"></div>
@@ -173,7 +186,7 @@
                             - Serious Coin ETF<br>
                             - Serious Coin becomes world reserve currency
                             <br><br>
-                            <img class="evolution-of-money-meme" src="assets/evolution-of-money-meme.webp"><br>
+                            <img class="evolution-of-money-meme" src="/assets/evolution-of-money-meme.webp"><br>
                             <div class="evolution-of-money-meme-subtext-container">
                                 <p class="evolution-of-money-meme-subtext">
                                     Research shows that money has continued to become more serious over time.
@@ -204,17 +217,17 @@
                     <div class="footer-social-icons">
                       <a href="https://twitter.com/realseriouscoin" target="_blank">
                         <div class="social-icon-container">
-                          <img class="footer-x-icon" src="assets/serious-x-icon-thick.webp">
+                          <img class="footer-x-icon" src="/assets/serious-x-icon-thick.webp">
                         </div>
                       </a>
                       <a href="https://discord.gg/8gzry5nnkn" target="_blank">
                         <div class="social-icon-container">
-                          <img class="footer-discord-icon" src="assets/serious-discord-icon.webp">
+                          <img class="footer-discord-icon" src="/assets/serious-discord-icon.webp">
                         </div>
                       </a>
                       <a href="https://t.me/serious_coin" target="_blank">
                         <div class="social-icon-container">
-                          <img class="footer-telegram-icon" src="assets/serious-tg-icon.webp">
+                          <img class="footer-telegram-icon" src="/assets/serious-tg-icon.webp">
                         </div>
                       </a>
                     </div>
@@ -224,6 +237,6 @@
         </div>
 
         <!-- Personal JS -->
-        <script src="app.js"></script>
+        <script src="/app.js"></script>
     </body>
 </html>

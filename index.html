@@ -19,14 +19,27 @@
   <body>
     <!-- NAVIGATION -->
     <nav>
-      <a href="./index.html"><img src="assets/Serious-Web.webp" class="logo"/></a>
+      <a href="/"><img src="assets/Serious-Web.webp" class="logo"/></a>
       <!-- NAV LINKS -->
       <ul>
-        <li><a href="./index.html" class="active">Home</a></li>
-        <li><a href="./whitepaper.html">Whitepaper</a></li>
-        <li><a href="./memetoolkit.html">Meme Toolkit</a></li>
-        <li><a href="https://vvs.finance/swap?inputCurrency=CRO&outputCurrency=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank" class="glow-on-hover">Buy on VVS</a></li>
-      </ul>
+        <li class="mobile-nav-links active"><a href="/">Home</a></li>
+        <li class="mobile-nav-links"><a href="/whitepaper">Whitepaper</a></li>
+        <!--<li class="mobile-nav-links"><a href="/learn">Learn</a></li>-->
+        <!--<li class="mobile-nav-links"><a href="/nft-viewer">NFT Viewer (Beta)</a></li>-->
+        <li class="mobile-nav-links"><a href="/meme-toolkit">Meme Toolkit</a></li>
+
+        <li class="desktop-nav-links active"><a href="/">Home</a></li>
+        <li class="desktop-nav-links"><a href="/whitepaper">Whitepaper</a></li>
+        <!--<li class="desktop-nav-links"><a href="/learn">Learn</a></li>-->
+        <li class="dropdown">
+            <a href="#" class="desktop-nav-links">Serious Tools</a>
+            <ul class="dropdown-content">
+                <!--<li><a href="/nft-viewer">NFT Viewer (Beta)</a></li>-->
+                <li><a href="/meme-toolkit">Meme Toolkit</a></li>
+            </ul>
+        </li>
+        <li class="desktop-nav-links"><a href="https://vvs.finance/swap?inputCurrency=CRO&outputCurrency=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank" class="glow-on-hover">Buy on VVS</a></li>
+    </ul>
       <!-- MOBILE BURGER MENU -->
       <a href="https://vvs.finance/swap?inputCurrency=CRO&outputCurrency=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank" class=" mobile-nav-buy">Buy on VVS</a>
       <div class="burger">

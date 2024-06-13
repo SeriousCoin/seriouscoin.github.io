@@ -1,0 +1,483 @@
+/* Existing CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: #3760af;
+}
+
+.nft-viewer-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 8rem;
+    /*
+    margin: 0;
+    margin-left: 2em;
+    margin-right: 2em;
+    */
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 41px;
+    color: #f1f2f3;
+}
+
+#input-container h1 {
+  font-size: clamp(0.1rem, 7vw, 2.6rem);
+  padding-bottom: 0.5em;
+}
+
+label {
+    color: #f1f2f3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: clamp(0.1rem, 2.64vw, 1rem);
+    border: 1px solid #ccc;
+    border-radius: 1000px;
+}
+
+button {
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    width: auto;
+    margin-left: auto;
+    margin-right: 0;
+    color: white;
+    border: none;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#loadButton {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  width: fit-content;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #f1f2f3;
+  text-decoration: none;
+  background-color: transparent;
+  border: #f1f2f3 0.1em solid;
+  border-radius: 1000px;
+  margin-top: 1.5em;
+  padding: 0.75em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#loadButton:hover {
+color: #101010;
+border: #f1f2f3 0.1em solid;
+background-color: #f1f2f3;
+transform: none;
+}
+
+.loading {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.nft-display-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nft-container {
+    max-height: 600px;
+    position: relative;
+}
+
+.nft-media-container, .nft-info-container {
+    width: 48%;
+    position: relative;
+}
+
+.nft-info-container {
+    max-height: 500px; /* Adjust this value as needed */
+    overflow-y: auto;
+    padding-right: 16px; /* Add padding to make room for scrollbar */
+}
+
+.nft-media {
+    min-height: 580px;
+    min-width: 580px;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.nft-metadata {
+    margin-top: 10px;
+}
+
+.nft-metadata dt {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f1f2f3;
+    text-align: left;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+
+.nft-metadata dt::before,
+.nft-metadata dt::after {
+  background-color: #f1f2f3;
+  content: "";
+  display: inline-block;
+  height: 3px;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.nft-metadata dt::before {
+  display: none;
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.nft-metadata dt::after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.nft-metadata dd {
+    font-size: 22px;
+    margin: 0 0 10px 0;
+    color: #f1f2f3;
+    text-align: left;
+}
+
+.nft-metadata dt:nth-child(1) {
+    display: none;
+}
+.nft-metadata dd:nth-child(2) {
+    font-weight: bold;
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+.nft-metadata dt:nth-child(3) {
+  padding-bottom: 35px;
+}
+.nft-metadata dd:nth-child(4) {
+  padding-bottom: 25px;
+}
+.nft-metadata dt:nth-child(5) {
+  padding-bottom: 35px;
+}
+
+.attributes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.attribute-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: transparent;
+  border: 2px solid #f1f2f3;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  color: #f1f2f3;
+  height: 100px;
+  overflow: hidden;
+}
+
+.attribute-box h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.attribute-box p {
+  /*
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  */
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #f1f2f3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* New CSS for Expandable Container */
+.title{
+    color: #f1f2f3;
+    font-size: 24px;
+}
+
+.expandable-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: calc(20px + 16px);
+  margin-bottom: 20px;
+  width: 46.5%;
+  height: 70px;
+  overflow: hidden;
+  background: /*rgba(0, 0, 0, 1)*/ #252525;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+  /* backdrop-filter: blur(10px); */
+  border-radius: 20px;
+  transition: height 0.25s;
+}
+
+.expandable-container button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  color: #f1f2f3;
+  /* background: transparent; */
+  background: #252525;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(.25,.8,.25,1);
+  padding: 0 24px;
+}
+
+.expandable-container button:hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  color: #f1f2f3;
+  /* background: transparent; */
+  background: #252525;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(.25,.8,.25,1);
+  padding: 0 24px;
+  transform: scale(1);
+}
+
+.expandable-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #f1f2f3;
+  /* background: transparent; */
+  background: #252525;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(.25,.8,.25,1);
+  padding: 0 24px;
+}
+
+.expandable-title:hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #f1f2f3;
+  /* background: transparent; */
+  background:#252525;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(.25,.8,.25,1);
+  padding: 0 24px;
+}
+/*
+.expandable-title:disabled {
+  cursor: not-allowed;
+}
+*/
+.expandable-hidden {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 130px; /* Adjust height to match expandable container's expanded height minus title height */
+  color: #f1f2f3;
+  background-color: transparent; /* Add a background color if needed */
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.arrow {
+  width: 36px;
+  height: 36px;
+  fill: currentColor;
+  transition: transform 0.25s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+  /* Scrollbar styling */
+.nft-info-container::-webkit-scrollbar {
+    width: 10px; /* Adjust scrollbar width */
+}
+
+.nft-info-container::-webkit-scrollbar-thumb {
+    background-color: #f1f2f3; /* Scrollbar thumb color */
+    border-radius: 6px; /* Scrollbar thumb border radius */
+    border: 3px solid transparent; /* Adds space around the thumb */
+    background-clip: content-box; /* Ensures the border is visible */
+}
+
+.nft-info-container::-webkit-scrollbar-track {
+    background-color: rgba(37, 37, 37, 0.25); /* Scrollbar track color */
+    border-radius: 6px; /* Scrollbar track border radius */
+}
+
+/* Media query for mobile devices */
+@media (max-width: /*1200px*/ 1300px) {
+
+  .nft-viewer-page #nft-container{
+    align-items: baseline;
+  }
+
+  .nft-display-container {
+    flex-direction: column;
+    max-width: 600px;
+  }
+
+  .nft-media-container, .nft-info-container {
+    width: 100%;
+    position: relative;
+}
+
+.nft-info-container {
+  height: fit-content;
+  max-height: fit-content;
+  overflow-y: hidden;
+  padding-right: 0px; /* Remove padding from scrollbar */
+  padding-bottom: 70px;
+}
+
+.nft-media {
+  min-height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+  .expandable-container {
+    width: 94%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, 0);
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .nft-metadata dt {
+    font-size: clamp(1.3rem, 4.2vw, 1.875rem);
+  }
+
+  .nft-metadata dd {
+    font-size: clamp(1rem, 3vw, 1.375rem);
+  }
+
+  .nft-metadata dd:nth-child(2) {
+    font-size: clamp(1.5rem, 5.5vw, 2.5rem);
+  }
+
+  .attributes-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .details {
+    /* font-size: 12px; */
+    font-size: clamp(0.1rem, 3.1vw, 10rem);
+  }
+}

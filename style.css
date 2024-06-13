@@ -43,25 +43,81 @@ body {
     cursor: pointer;
     max-height: 64px;
   }
-  nav ul li{
+  .mobile-nav-links {
+    display: none;
+  }
+
+  nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 10px;
   }
-  nav ul li a{
+
+  nav ul li a {
     color: rgba(241, 242, 243, 0.75);
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
-    padding: 0.69em;
+    padding: 0.5em;
     position: relative;
     transition: 0.25s;
   }
-  nav ul li a.active{
+
+  nav ul li a.active {
     color: rgba(241, 242, 243, 1.0);
   }
 
-  nav ul li a:hover{
+  nav ul li a:hover {
+    color: rgba(241, 242, 243, 1.0);
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: block;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    background-color: #101010;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    min-width: fit-content;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding-top: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .dropdown-content li {
+    display: block;
+    text-wrap: nowrap;
+  }
+
+  .dropdown-content li a {
+    color: rgba(241, 242, 243, 0.75);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content li a:hover {
+    background-color: rgba(241, 242, 243, 0.1);
+    color: rgba(241, 242, 243, 1.0);
+  }
+
+  /* Dropdown content hover state */
+  .dropdown:hover .dropdown-content {
+    opacity: 1;
+    max-height: 200px; /* Adjust based on the number of items */
+    padding-top: 20px;
+  }
+
+  .dropdown:hover a {
     color: rgba(241, 242, 243, 1.0);
   }
 
@@ -701,6 +757,66 @@ body {
     }
   /* Whitepaper Section End */
 
+  /* Learn Section Start */
+    .tokenstandards-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      font-size: clamp(0rem, 3.4vw, 1.8rem);
+      line-height: clamp(0rem, 5vw, 2.6rem);
+      color: #f1f2f3;
+      white-space: nowrap;
+    }
+
+    .introduction-text {
+      font-size: clamp(0.2rem, 3.6vw, 1.4rem);
+      color: #f1f2f3;
+    }
+    
+    /* unvisited link */
+    a:link {
+      color: #f1f2f3;
+      transition: all 0.25s ease;
+    }
+
+    /* visited link */
+    a:visited {
+      /* color: #97F0AC; */
+      color: #f1f2f3;
+    }
+
+    /* mouse over link */
+    a:hover {
+      color: #81B5F0;
+    }
+
+    /* selected link */
+    a:active {
+      color: #81B5F0;
+    }
+
+    .learn-image {
+      width: 100%;
+      border-radius: 25px;
+      margin: auto;
+    }
+
+    .final-links {
+      text-align: center;
+      font-size: clamp(0.2rem, 3.6vw, 1.4rem);
+      color: #f1f2f3;
+    }
+
+    .its-time-to-get-serious {
+      text-align: center;
+      font-size: clamp(0rem, 6.4vw, 3.4rem);
+      color: #f1f2f3;
+    }
+
+  /* Learn Section End */
+
   /* Meme Toolkit Start */
     .serious-meme-toolkit-title {
       display: flex;
@@ -715,7 +831,7 @@ body {
 
     .serious-meme-toolkit-title h1 {
       color: #f1f2f3;
-      font-size: clamp(0.2rem, 4.8vw, 2.8rem);
+      font-size: clamp(0.2rem, 5.6vw, 2.8rem);
     }
 
     .meme-toolkit-container {
@@ -856,61 +972,6 @@ body {
     overflow-x: hidden;
   }
 
-  /* NAV */
-
-  nav{
-    justify-content: space-between;
-  }
-
-  nav ul{
-    position: absolute;
-    z-index: -1;
-    right: 0px;
-    height: auto;
-    top: 6em;
-    margin: 0px;
-    background: #101010;
-    backdrop-filter: blur(100px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    transform: translateY(-100%);
-    transition: 0.3s ease-in-out;
-  }
-
-  nav ul li{
-    opacity: 0;
-    margin: 30px;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  nav ul li:nth-child(4){
-    display: none;
-  }
-
-  .logo{
-    max-height: 40px;
-  }
-
-  .mobile-nav-buy {
-    display: block;
-    color: rgba(241, 242, 243, 1.0);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 0.69em;
-    position: relative;
-    transition: 0.25s;
-  }
-
-  .burger{
-    display: block;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-  }
-
   .landingimage-section {
     padding: 1em;
   }
@@ -963,9 +1024,81 @@ body {
     padding-top: 1em;
   }
 
+  .meme-toolkit-download {
+    padding: 1em;
+  }
+
   .footer-section {
     padding: 1em;
     transition: all 0.3s ease;
+  }
+}
+
+/* For Navbar */
+@media only screen and (max-width: 860px) {
+  nav{
+    justify-content: space-between;
+  }
+
+  nav ul{
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    height: auto;
+    top: 6em;
+    margin: 0px;
+    background: #101010;
+    backdrop-filter: blur(100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: 0.3s ease-in-out;
+  }
+
+  nav ul li{
+    opacity: 0;
+    margin: 30px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  nav ul li a{
+  padding: 0;
+  }
+
+  .logo{
+    max-height: 40px;
+  }
+
+  .mobile-nav-buy {
+    display: block;
+    color: rgba(241, 242, 243, 1.0);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0.5em;
+    position: relative;
+    transition: 0.25s;
+  }
+
+  .desktop-nav-links {
+    display: none;
+  }
+
+  .mobile-nav-links {
+    display: flex;
+  }
+
+  .burger{
+    display: block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .dropdown-content {
+    display: none !important;
   }
 }
 

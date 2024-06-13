@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Serious Coin</title>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap" rel="stylesheet">
+        <!-- Google Material Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!-- Personal CSS -->
+        <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+        <!-- NAVIGATION -->
+        <nav>
+        <a href="/"><img src="/assets/Serious-Web.webp" class="logo"/></a>
+        <!-- NAV LINKS -->
+        <ul>
+            <li class="mobile-nav-links"><a href="/">Home</a></li>
+            <li class="mobile-nav-links"><a href="/whitepaper">Whitepaper</a></li>
+            <li class="mobile-nav-links active"><a href="/learn">Learn</a></li>
+            <li class="mobile-nav-links"><a href="/nft-viewer">NFT Viewer (Beta)</a></li>
+            <li class="mobile-nav-links"><a href="/meme-toolkit">Meme Toolkit</a></li>
+
+            <li class="desktop-nav-links"><a href="/">Home</a></li>
+            <li class="desktop-nav-links"><a href="/whitepaper">Whitepaper</a></li>
+            <li class="desktop-nav-links active"><a href="/learn">Learn</a></li>
+            <li class="dropdown">
+                <a href="#" class="desktop-nav-links">Serious Tools</a>
+                <ul class="dropdown-content">
+                    <li><a href="/nft-viewer">NFT Viewer (Beta)</a></li>
+                    <li><a href="/meme-toolkit">Meme Toolkit</a></li>
+                </ul>
+            </li>
+            <li class="desktop-nav-links"><a href="https://vvs.finance/swap?inputCurrency=CRO&outputCurrency=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank" class="glow-on-hover">Buy on VVS</a></li>
+        </ul>
+        <!-- MOBILE BURGER MENU -->
+        <a href="https://vvs.finance/swap?inputCurrency=CRO&outputCurrency=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank" class=" mobile-nav-buy">Buy on VVS</a>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        </nav>
+
+        <div class="page-background"></div>
+
+        <div class="page">
+            <div class="whitepaper-section">
+                <div class="whitepaper-container">
+                    <div class="tokenstandards-title">
+                        <h1>A SERIOUS GUIDE TO:</h1>
+                        <br>
+                        <p><b>Understanding Token Standards in Crypto<br>ERC-20, ERC-721, and ERC-1155</b></p>
+                    </div>
+                    <div class="whitepaper-divider"></div>
+                    <div class="introduction-text">
+                        In this guide, we’ll explore the three primary token standards in the crypto space - <b>ERC-20, ERC-721, and ERC-1155.</b>
+                        If you want to participate in the world of crypto, you’ll end up interacting with all of these token standards at some point along your journey.
+                        Whether you're a complete beginner or have some experience with crypto already, this guide will help you understand the differences between each token standard and why certain standards are better suited for specific use cases.
+                        <br><br>
+                        We will use the <b>Serious Coin ecosystem</b> on the <b>Cronos blockchain</b> as a primary example for exploring each token standard. 
+                    </div>
+                    <div class="whitepaper-divider"></div>
+                    <div class="tokenstandards-title">
+                        <b>The Cronos Chain: EVM Compatibility</b>
+                    </div>
+                    <br>
+                    <div class="introduction-text">
+                        <img class="learn-image" src="/assets/serious-learn-evmcompatibility.webp">
+                        <br><br>
+                        Serious Coin is deployed on the <a href="https://cronos.org/" target="_blank">Cronos chain</a>, a blockchain that is fully compatible with the <b>Ethereum Virtual Machine (EVM)</b>.
+                        This means the Cronos blockchain inherits the same programming language (Solidity) and token standards from Ethereum, but with the added benefits of faster transactions and lower fees. 
+                        <br><br>
+                        This makes Cronos an especially attractive blockchain to begin your crypto journey on.
+                        By learning about and using the Cronos chain, you will inherently learn and understand how Ethereum and all other EVM chains operate (and pay a lot less in transaction fees!). 
+                    </div>
+                    <div class="whitepaper-divider"></div>
+                    <div class="tokenstandards-title">
+                        <b>What is a Token Standard?</b>
+                    </div>
+                    <br>
+                    <div class="introduction-text">
+                        Token standards are essentially code specifications created for smart contracts in order to standardize basic functions on a blockchain protocol.
+                        Think of them as foundational sets of formatting rules and organizing principles for coding crypto tokens.
+                        By standardizing these rules, it makes it easier for developers to collaborate and build applications that work together on the blockchain. 
+                        <br><br>
+                        ERC stands for <b>Ethereum Request for Comment</b>.
+                        It is a set of technical documents with standardized guidelines for creating smart contracts on Ethereum.
+                        Technically, anyone can create an ERC token standard, but it first must go through the process of an Ethereum Improvement Proposal (EIP) and be accepted as an ERC standard by the core developer community.
+                        In general, rather than create new token standards, most developers will opt to use one of the preexisting popular token standards - <b>ERC-20, ERC-721, or ERC-1155</b>. 
+                        <br><br>
+                        On the Cronos blockchain, CRC stands for <b>Cronos Request for Comment</b>, and the common token standards are <b>CRC-20, CRC-721, and CRC-1155</b> - analogous to Ethereum’s ERC-20, ERC-721, and ERC-1155 standards.
+                        Before we dive into the details of those standards, though, it is helpful to understand the difference between fungible and non-fungible tokens. 
+                    </div>
+                    <div class="whitepaper-divider"></div>
+                    <div class="tokenstandards-title">
+                        <b>Understanding Fungible & Non-Fungible Tokens</b>
+                    </div>
+                    <br>
+                    <div class="introduction-text">
+                        <img class="learn-image" src="/assets/serious-learn-fungibility.webp">
+                        <br><br>
+                        <b>Fungible Tokens:</b> Fungible tokens are assets that are <b>interchangeable</b> with each other.
+                        Each unit of a fungible token is identical to another, making them perfect for use as currency or as other assets where uniformity is key.
+                        For example, one <a href="https://cronoscan.com/token/0x7e575f50777f5096f323eb063fd80ba447627060" target="_blank">Serious Coin ($SERIOUS)</a> is the same as any other Serious Coin. You can easily exchange one Serious Coin for another Serious Coin at a 1-1 value.
+                        <br><br>
+                        <b>Non-Fungible Tokens:</b> Non-fungible tokens (“NFTs”) are <b>unique</b> assets that cannot be exchanged on a one-to-one basis.
+                        Each NFT has distinct properties and value, making them ideal for representing ownership of unique items like digital art, collectibles, or game assets.
+                        No two NFTs are exactly alike. For example, the <a href="https://cronoscan.com/nft/0xea1635a0e9344d933df42c0fd494d39bce865dc4/8285" target="_blank">Loaded Lion #8285 NFT</a> is different from the <a href="https://cronoscan.com/nft/0xea1635a0e9344d933df42c0fd494d39bce865dc4/203" target="_blank">Loaded Lion #203 NFT</a> and they will be valued differently even though they were minted under the same <a href="https://cronoscan.com/token/0xea1635a0e9344d933df42c0fd494d39bce865dc4" target="_blank">Loaded Lions contract</a>.
+                        <br><br>
+                        Outside of the world of crypto, you can think of a $1 dollar bill as fungible.
+                        It can be exchanged at a 1-1 value with any other $1 dollar bill. An art piece, on the other hand, would be considered non-fungible.
+                        You wouldn’t be able to exchange a unique art piece 1-1 with an alternative piece of art, even if both were created by the same artist. 
+                        <br><br>
+                        Now that we’ve covered that - let’s explore each primary token standard in depth!
+                    </div>
+                    <div class="whitepaper-divider"></div>
+                    <div class="tokenstandards-title">
+                        <b>ERC-20 / CRC-20:<br>The Gold Standard for Fungible Tokens</b>
+                    </div>
+                    <br>
+                    <div class="introduction-text">
+                        <b>What is ERC-20 & CRC-20?</b>
+                        <br><br>
+                        ERC-20 is the most common standard for creating fungible tokens on the Ethereum blockchain and CRC-20 is the most common standard for creating fungible tokens on the Cronos blockchain.
+                        This standard defines a set of rules that all fungible tokens must follow, ensuring they can interact seamlessly with each other and with various services and applications built on the blockchain.
+                        <br><br>
+                        On Cronos - CRO is the native token which is used as “gas” to pay for transaction fees on the blockchain.
+                        Most other tokens on Cronos that are tradeable on exchanges like VVS are CRC-20 tokens that have been created using the CRC-20 token standard.
+                        <br><br>
+                        For example, <a href="https://cronoscan.com/token/0x7e575f50777f5096f323eb063fd80ba447627060" target="_blank">Serious Coin ($SERIOUS)</a> is a CRC-20 token on the Cronos blockchain.
+                        It is tradeable on decentralized exchanges like <a href="https://vvs.finance/swap?inputCurrency=CRO&outputCurrency=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank">VVS</a>. 
+                        <br><br>
+                        <b>Benefits of CRC-20:</b>
+                        <br><br>
+                        <b>Interoperability:</b> CRC-20 tokens can be easily integrated into wallets, exchanges, and DeFi platforms on Cronos, providing broad compatibility.
+                        <br><br>
+                        <b>Liquidity:</b> The widespread use of CRC-20 means there's high liquidity and extensive support across the crypto ecosystem. CRC-20 tokens can easily be swapped for other CRC-20 tokens on exchanges.
+                        <br><br>
+                        <b>Simplicity:</b> The standard is straightforward and well-documented, making it easy for developers to create and manage tokens. In fact, with platforms like <a href="https://minted.network/memeted/" target="_blank">Memeted</a> and <a href="https://www.puush.fun/" target="_blank">Puush.fun</a> you can easily mint a CRC-20 token using their no-code tools.
+                        <br><br>
+                        <b>Use Case:</b>
+                        <br><br>
+                        <b>Tradable Tokens:</b> CRC-20 is perfect for tradable tokens like Serious Coin ($SERIOUS), enabling easy transactions and integration with the broader crypto market.
+                        Some CRC-20 tokens may be issued as utility tokens that provide access to products or services, or as governance tokens that allow holders to vote on changes to a protocol. 
+                    </div>
+                    <div class="whitepaper-divider"></div>
+                    <div class="tokenstandards-title">
+                        <b>ERC-721 / CRC-721:<br>The Gold Standard for NFTs</b>
+                    </div>
+                    <br>
+                    <div class="introduction-text">
+                        <b>What is ERC-721 & CRC-721?</b>
+                        <br><br>
+                        ERC-721 is the most common standard for creating non-fungible tokens (NFTs) on the Ethereum blockchain and CRC-721 is the most common standard for creating NFT’s on the Cronos blockchain.
+                        Each CRC-721 token is unique and can represent ownership of a specific item, be it digital art, a game item, or any other unique asset.
+                        <br><br>
+                        <b>Benefits of CRC-721:</b>
+                        <br><br>
+                        <b>Uniqueness:</b> Each token is distinct, making CRC-721 ideal for representing unique assets like collectibles and artwork.
+                        <br><br>
+                        <b>Ownership:</b> CRC-721 tokens can prove ownership and authenticity of digital assets, which is crucial for artists and collectors.
+                        <br><br>
+                        <b>Use Case:</b>
+                        <br><br>
+                        <b>Unique Collectibles:</b> CRC-721 is perfect for creating NFTs that represent unique digital assets. Most PFP (profile picture) NFT collections are created using the CRC-721 format. This token standard is also popularly employed in blockchain based video games (think tradeable virtual outfits and accessories). Beyond collectibles and game items, CRC-721 tokens can be issued to represent virtual real estate, music rights, or any other unique digital asset.
+                        <br><br>
+                        Currently there is no Serious Coin NFT PFP collection. But if a collection were to be created in the future, it would utilize the CRC-721 token standard. 👀
+                    </div>
+                    <div class="whitepaper-divider"></div>
+                    <div class="tokenstandards-title">
+                        <b>ERC-1155 / CRC-1155:<br>The Multi-Token Standard</b>
+                    </div>
+                    <br>
+                    <div class="introduction-text">
+                        <b>What is ERC-1155 & CRC-1155?</b>
+                        <br><br>
+                        ERC-1155 is a versatile token standard that supports both fungible and non-fungible tokens (NFTs) on the Ethereum blockchain, while CRC-1155 offers the same on the Cronos blockchain.
+                        This means a single smart contract can manage multiple token types, which can be particularly useful for gaming, collectibles, and more.
+                        <br><br>
+                        <b>Benefits of CRC-1155:</b>
+                        <br><br>
+                        <b>Efficiency:</b> CRC-1155 reduces the need for multiple smart contracts, saving on gas fees and simplifying transactions.
+                        <br><br>
+                        <b>Flexibility:</b> This standard supports a wide range of token types, making it ideal for diverse applications like gaming and digital art.
+                        <br><br>
+                        <b>Batch Transfers:</b> CRC-1155 allows for batch transfers of multiple tokens, increasing efficiency and reducing transaction costs.
+                        <br><br>
+                        <b>Use Case:</b>
+                        <br><br>
+                        <b>Multi-Functional Assets:</b> CRC-1155 is perfect for creating and managing diverse assets within a single ecosystem. Some blockchain based games take advantage of the CRC-1155 standard to manage both fungible in-game currency tokens and unique non-fungible game assets from the same contract.
+                        <br><br>
+                        <a href="https://cronos.nftscan.com/0x4dd46c54e2344e8d9ee9a054b2e13f2ceb1f7125?module=NFTs" target="_blank">The SERIOUS Genesis Collection</a> tokens were created using the CRC-1155 token standard.
+                        There are three separate tokens that were minted in this contract.
+                        The <a href="https://cronos.nftscan.com/0x4dd46c54e2344e8d9ee9a054b2e13f2ceb1f7125/3" target="_blank">SERIOUS OG</a> token was minted as a non-fungible token with only one unique edition.
+                        The <a href="https://cronos.nftscan.com/0x4dd46c54e2344e8d9ee9a054b2e13f2ceb1f7125/1" target="_blank">SERIOUS Pioneer</a> and <a href="https://cronos.nftscan.com/0x4dd46c54e2344e8d9ee9a054b2e13f2ceb1f7125/2" target="_blank">SERIOUS VIP</a> tokens were minted as fungible tokens each with multiple editions.
+                        This demonstrates the ability for multiple tokens, both fungible & non-fungible, to be created from the same CRC-1155 contract. 
+                        <!--
+                        <br><br>
+                        The SERIOUS Genesis Collection is tradeable on NFT marketplaces like <a href="https://app.ebisusbay.com/" target="_blank">Ebisu's Bay</a> and <a href="https://minted.network/" target="_blank">Minted</a>.
+                        -->
+                    </div>
+                    <div class="whitepaper-divider"></div>
+                    <div class="tokenstandards-title">
+                        <b>Still Have Questions?</b>
+                    </div>
+                    <br>
+                    <div class="introduction-text">
+                        The Serious Coin community is serious about education! We invite you to join our <a href="https://discord.com/invite/8gzry5nnkn" target="_blank">discord server</a> and bring us any additional questions you may have! 
+                        <br><br>
+                        Reading about crypto is great, but the best way to learn is to try it out yourself! 
+                    </div>
+                    <br><br>
+                    <div class="final-links">
+                        <a href="https://vvs.finance/swap?inputCurrency=CRO&outputCurrency=0x7E575f50777f5096f323EB063fD80BA447627060" target="_blank">Buy a CRC-20 Token (Serious Coin is tradeable on VVS)</a>
+                        <br><br>
+                        <a href="https://app.ebisusbay.com/" target="_blank">Buy a CRC-1155 Token (SERIOUS Genesis Collection is available on Ebisu's Bay)</a>
+                    </div>
+                    <br><br>
+                    <div class="its-time-to-get-serious">
+                        <b>It's Time To Get $SERIOUS</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal JS -->
+        <script src="/app.js"></script>
+
+    </body>
+</html>
