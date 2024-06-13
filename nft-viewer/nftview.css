@@ -131,8 +131,8 @@ transform: none;
 }
 
 .nft-container {
-    max-height: 600px;
-    position: relative;
+  /* max-height: 600px; */
+  position: relative;
 }
 
 .nft-media-container, .nft-info-container {
