@@ -124,7 +124,7 @@ transform: none;
     max-width: 1200px;
 }
 
-.nft-container {
+#nft-container {
   /* max-height: 600px; */
   position: relative;
 }
@@ -266,10 +266,9 @@ transform: none;
   width: 46.5%;
   height: 70px;
   overflow: hidden;
-  background: /*rgba(0, 0, 0, 1)*/ #252525;
+  background: #252525;
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
-  /* backdrop-filter: blur(10px); */
   border-radius: 20px;
   transition: height 0.25s;
 }
@@ -444,11 +443,17 @@ transform: none;
 }
 
   .expandable-container {
+    /*
     width: 94%;
     left: 50%;
     right: auto;
     transform: translate(-50%, 0);
     margin-right: 0;
+    */
+    width: 94%;
+    left: 0;
+    margin-right: 0;
+    justify-self: center;
   }
 }
 
