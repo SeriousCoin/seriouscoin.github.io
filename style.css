@@ -672,6 +672,36 @@ body {
       padding-right: 0.5em;
       cursor: pointer;
     }
+    
+    .dev-team-links {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      gap: 50px;
+      padding: 2em;
+    }
+
+    .dev-team-info-container{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .dev-team-name{
+      font-size: 20px;
+      padding-bottom: 1em;
+    }
+
+    .dev-team-image{
+      width: 100%;
+      max-width: 250px;
+    }
+
+    .dev-team-text{
+      font-size: 20px;
+      padding-top: 1em;
+    }
   /* Tokenomics Section End */
 
   .disclaimer-text {
@@ -1029,6 +1059,10 @@ body {
   }
   .dist-3 {
     font-size: clamp(0.2rem, 4vw, 1.4rem);
+  }
+
+  .dev-team-links {
+    flex-direction: column;
   }
 
   .whitepaper-container {
